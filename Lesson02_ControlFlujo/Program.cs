@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using static System.Console; // Permite ya no escribir Console.Writeline si no solo WriteLine();
 
 namespace Lesson02_ControlFlujo
@@ -47,7 +49,7 @@ namespace Lesson02_ControlFlujo
             WriteLine("\n USANDO TRYPARSE");
 
             WriteLine("Ingrese un valor:");
-            string valor = ReadLine();
+            string valor ="58";
             if (double.TryParse(valor, out double value))
                 WriteLine($"{value} * 0.50 ={value * 0.50}");
             else
@@ -85,6 +87,43 @@ namespace Lesson02_ControlFlujo
                 WriteLine($"index vale: {index}");
                 index++;
             }
+
+            // USANDO CICLO FOR
+            WriteLine("\n USANDO CICLO FOR");
+
+            //Hacer que cuente de 1 al 10 automaticamente
+            for (int i = 1; i <= 10; i++)
+            {
+                WriteLine($"index vale {i}" );
+            }
+
+            // USANDO LINQ BASIC
+            WriteLine("\n USANDO LISTAS");
+
+            List<decimal> decimales;//Se declara una lista de decimales
+            decimales = new List<decimal>() {20, 50.50M, 70.45M,85,54,35 };
+
+            //Para usar metodos de suma, max, min, average se usa 
+            //namespace linq en la cabecera
+            WriteLine($"Suma: {decimales.Sum()}"); //Calcula l
+            WriteLine($"Maximo: {decimales.Max()}"); //Calcula 
+            WriteLine($"Minimo: {decimales.Min()}"); //Calcula l
+            WriteLine($"Promedio: {decimales.Average()}"); //Calcula l
+            WriteLine($"70.45M existe: {decimales.Contains(70.45M)}"); //Calcula l
+            WriteLine();
+            //Usando ForEach en List<T>
+            List<string> nombres;
+            nombres = new List<string>() {"Jorge", "Carlos","Manuel", "Roberto", "Miguel"};
+            nombres.ForEach(x => WriteLine($"- {x}"));
+
+            // USANDO OPERADORES TERNARIOS
+            WriteLine("\n OPERADORES TERNARIOS");
+
+
+            int numberA=20, numberB=15;
+
+            string y = (numberA == numberB) ? "Equeals" : "Diferent";
+            WriteLine(y);
 
             // Permiti que la ventana de consola no se cierre.
             WriteLine("\nEnter close");
