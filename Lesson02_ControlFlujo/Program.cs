@@ -42,6 +42,50 @@ namespace Lesson02_ControlFlujo
             else
                 WriteLine($"EL precio {precioone:C} es mayor {preciotwo:C}");
 
+            // USANDO TRYPARSE PARA SER MAS LEGIBLE EN EL CODIGO
+
+            WriteLine("\n USANDO TRYPARSE");
+
+            WriteLine("Ingrese un valor:");
+            string valor = ReadLine();
+            if (double.TryParse(valor, out double value))
+                WriteLine($"{value} * 0.50 ={value * 0.50}");
+            else
+                WriteLine($"{valor} * 0.50= No es factible..");
+
+
+            // USANDO OPERADORES ++ ; -- ; =+ ; =- 
+            WriteLine("\n USANDO OPERADORES INCREMENTO Y DECREMENTO");
+
+            int numero = 1;
+
+            // Da el mismo resultado ya que ++ incrementa en 1
+            WriteLine($" {numero} + 1  : {numero + 1}"); // 2
+            WriteLine($" ++numero     : { ++numero }");   //  2
+
+            // Da el mismo resultado ya que -- decrementa en 1
+            WriteLine($" {numero} - 1  : {numero - 1}"); // 2
+            WriteLine($" --numero     : { --numero }");   //  2
+
+            // Tiene la misma funcionalidad en incremento
+            WriteLine($" numero = numero + 20 => numero ={numero + 20}");
+            WriteLine($" numero  += 20 => {numero += 20}");
+
+            // Tiene la misma funcionalidad en decremento
+            WriteLine($" numero = numero - 20 => numero ={numero - 20}");
+            WriteLine($" numero  -= 20 => {numero -= 20}");
+
+
+            // USANDO CICLO WHILE
+            WriteLine("\n USANDO CICLO WHILE");
+
+            int index = 1; //Hacer que cuente de 1 al 10 automaticamente
+            while (index <= 10)
+            {
+                WriteLine($"index vale: {index}");
+                index++;
+            }
+
             // Permiti que la ventana de consola no se cierre.
             WriteLine("\nEnter close");
             _ = ReadLine();
