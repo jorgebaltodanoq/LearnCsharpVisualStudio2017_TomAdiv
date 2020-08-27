@@ -22,16 +22,6 @@ namespace Lesson02_ControlFlujo
             WriteLine($"{4} != {5}? : {4 != 5}");  //4  es diferente 5 -> yes or true
 
 
-
-
-
-
-
-
-
-
-
-
             // Permiti que la ventana de consola no se cierre.
             WriteLine("\nEnter close");
             _ = ReadLine();
