@@ -19,18 +19,28 @@ namespace Lesson02_ControlFlujo
             WriteLine($"{4} <= {4}? : {4 <= 4}");  //4  es menor o igual que 4 -> yes or true
             WriteLine($"{4} >  {5}? : {4 >  5}");  //4  es meyor 5 -> not or false
             WriteLine($"{5} >= {5}? : {5 >= 5}");  //5  es meyor o igual 5 -> yes or true
-            WriteLine($"{4} != {5}? : {4 != 5}");  //4  es diferente 5 -> yes or true
+            WriteLine($"{4} != {5}? : {4 != 5} \n");  //4  es diferente 5 -> yes or true
 
 
+            // 2. Aprendiendo If and Else para hacer una 
+            //determinada accion
 
+            WriteLine("'IF' AND 'ELSE' ");
 
+            decimal precioone = 500M;
+            decimal preciotwo = 100M;
 
+            //Utilizando If and else
 
+            if (precioone > preciotwo) //precioone es mayor  preciotwo si es true se ejecuta la sentencia
+                WriteLine($"EL precio {precioone:C} es mayor {preciotwo:C}");
+            else
+                WriteLine($"EL precio {precioone:C} es menor {preciotwo:C}");
 
-
-
-
-
+            if (precioone < preciotwo) //precioone es mayor  preciotwo si es true se ejecuta la sentencia
+                WriteLine($"EL precio {precioone:C} es menor {preciotwo:C}");
+            else
+                WriteLine($"EL precio {precioone:C} es mayor {preciotwo:C}");
 
             // Permiti que la ventana de consola no se cierre.
             WriteLine("\nEnter close");
