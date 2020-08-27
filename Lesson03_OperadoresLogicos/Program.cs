@@ -10,6 +10,7 @@ namespace Lesson03_OperadoresLogicos
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Seguir mañana...");
         }
     }
 }
