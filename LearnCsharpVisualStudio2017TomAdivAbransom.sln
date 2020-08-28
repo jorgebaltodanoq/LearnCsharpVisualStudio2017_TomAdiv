@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson02_ControlFlujo", "Le
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson03_OperadoresLogicos", "Lesson03_OperadoresLogicos\Lesson03_OperadoresLogicos.csproj", "{0339B128-6FD1-43F3-9FBC-2D5441AE2B6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson04_Metodos", "Lesson04_Metodos\Lesson04_Metodos.csproj", "{0FCE07C4-5C2E-4FD9-9E4B-31F2D4FAB1B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0339B128-6FD1-43F3-9FBC-2D5441AE2B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0339B128-6FD1-43F3-9FBC-2D5441AE2B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0339B128-6FD1-43F3-9FBC-2D5441AE2B6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FCE07C4-5C2E-4FD9-9E4B-31F2D4FAB1B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FCE07C4-5C2E-4FD9-9E4B-31F2D4FAB1B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FCE07C4-5C2E-4FD9-9E4B-31F2D4FAB1B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FCE07C4-5C2E-4FD9-9E4B-31F2D4FAB1B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
