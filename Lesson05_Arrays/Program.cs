@@ -46,7 +46,7 @@ namespace Lesson05_Arrays
             WriteLine("\nARREGLO COMO PARAMETRO EN METODOS");
             WriteLine("---------------------------");
 
-            int[] valores = new int[]{10,20,30,40,50 }; // Arreglo de tipo int con 5 indices y adiciona valores
+            int[] valores = new int[] { 10, 20, 30, 40, 50 }; // Arreglo de tipo int con 5 indices y adiciona valores
 
             //Metodo que suma los valores del arreglo y se asigna a una variable su resultado
             int valorSuma = SumarValoresArreglo(valores);
@@ -61,18 +61,18 @@ namespace Lesson05_Arrays
 
 
             WriteLine("\nValores sin Params");
-            int dosValores = MultiplicaDosValores(2,5); //Permite multiplicar solo 2 numeros
-            int tresValores = MultiplicarTresValores(12,10,12); //Permite multipiplicar solo 3 numeros
-            
+            int dosValores = MultiplicaDosValores(2, 5); //Permite multiplicar solo 2 numeros
+            int tresValores = MultiplicarTresValores(12, 10, 12); //Permite multipiplicar solo 3 numeros
+
             WriteLine($"Mult. Dos Valores: {dosValores}");
             WriteLine($"Mult. Tres Valores: {tresValores}");
 
             WriteLine("\nValores con Params");
             //Con este metodo podemos multiplicar dos, tres , cuatro y etc de numeros
-            int paramsDosValores = ParamsVariosValores(10,4);
-            int paramsTresValores = ParamsVariosValores(10,4,5);
-            int paramsCincoValores = ParamsVariosValores(10,2,3,4,12);
-              
+            int paramsDosValores = ParamsVariosValores(10, 4);
+            int paramsTresValores = ParamsVariosValores(10, 4, 5);
+            int paramsCincoValores = ParamsVariosValores(10, 2, 3, 4, 12);
+
             WriteLine($" Mult. Dos valores: {paramsDosValores}");
             WriteLine($" Mult. Tres Valores: {paramsTresValores}");
             WriteLine($" Mult. Varios Valores: {paramsCincoValores}");
@@ -80,12 +80,12 @@ namespace Lesson05_Arrays
             // 4. ARREGLOS BIDIMENSIOANLES
             //Los arreglos bidimensionales te permiten agregan valores en dos dimensiones 
             // de un solo tipo de dato, donde se manejan en filas y columnas 2 x 2 ,3 x 3
-            
+
             WriteLine("\nARREGLO MULTI-DIMENSIONALES");
             WriteLine("---------------------------");
 
             //Crear arreglo bidimensional
-            string[,] datosPersonales = new string[3,3]; // Contendra 3 filas y 3 columnas
+            string[,] datosPersonales = new string[3, 3]; // Contendra 3 filas y 3 columnas
 
             //Forma 1: Rellenando datos en arreglo 
             datosPersonales[0, 0] = "Jorge"; //fila 0 columna 0 
@@ -118,14 +118,72 @@ namespace Lesson05_Arrays
 
             // 4. ARREGLOS DENTADOS
             //Los arreglos dentados o jagger son arreglos generales que agrupan o guardan mas arreglos
+            //En su interior de diferente o igual tamaño cada arreglo creado
 
             WriteLine("\nARREGLO DENTADOS");
             WriteLine("---------------------------");
 
+            // Creando un arreglo dentado de matrices unidimensionales
+            //  ------------------------
+            //  |  0 | 1   |           |
+            //  |  0 | 1   | 2  | 3    | } Arreglos irregulres dentro de un arreglo general
+            //  |  0 |  1  | 2  |      |
+            //  -----------------------
+
+            //Arreglo dentado que contendra 3 arreglos unidimensionales
+            string[][] informacion = new string[3][]; //Arreglo 1
+          
+            //Forma 1 de crear tamaño de columnas
+            informacion[0] = new string[2];
+            informacion[1] = new string[4];
+            informacion[2] = new string[3];
+
+            //Forma 1 de llenar el arreglo creado
+            informacion[0][0] = "Rous";
+            informacion[0][1] = "Secretaria";
+
+            informacion[1][0] = "Luis";
+            informacion[1][1] = "Ing. Industrial";
+            informacion[1][2] = "Gerente";
+            informacion[1][3] = "CEO";
+
+            informacion[2][0] = "Jorge";
+            informacion[2][1] = "Ing. Sistemas";
+            informacion[2][2] = "Administrativo";
+
+            //Mostrar Informacion con uso de un metodo
+            WriteLine("1RA FORMA DE USAR ARREGLOS DENTADOS");
+            MostrarInformacionArrayDentado(informacion);
+
+            // Forma 2 de crear Arreglo y llenarlo en la misma instruccion
+            string[][] datos =
+            {
+              new string [] {"Rous","Secretaria" },
+              new string [] {"Luis", "Ing. Industrial", "Gerente","Ceo" },
+              new string [] {"Jorge", "Ing.Sistemas", "Administrativo" }
+            };
+
+            WriteLine("\n2DA FORMA DE USAR ARREGLOS DENTADOS");
+            MostrarInformacionArrayDentado(datos);
 
             WriteLine("\nEnter closed");
             _ = ReadLine();
 
+        }
+
+        private static void MostrarInformacionArrayDentado(string[][] informacion)
+        {
+            for (int outer = 0; outer < informacion.Length; outer++)
+            {
+                Write($"Elementos {outer}:  ");
+
+                for (int inner = 0; inner < informacion[outer].Length; inner++)
+                {
+                    Write($"{informacion[outer][inner]},");
+                }
+
+                WriteLine();
+            }
         }
 
         private static void ImprimirValoresArreglo(string[,] coleccion)
